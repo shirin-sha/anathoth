@@ -12,7 +12,7 @@ const Cta2 = () => {
                            <Link href="tel:+18884521505"><i className="tji-phone"></i>1-888-452-1505</Link>
                         </li>
                         <li>
-                           <Link href="mailto:support@solvior.com"><i className="tji-email"></i>support@solvior.com</Link>
+                           <Link href="mailto:support@anathoth.com"><i className="tji-email"></i>support@anathoth.com</Link>
                         </li>
                      </ul>
                   </div>

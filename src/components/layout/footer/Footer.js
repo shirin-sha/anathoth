@@ -143,7 +143,7 @@ const Footer = ({ footerType }) => {
 										© 2025{" "}
 										<Link href="/" target="_blank">
 											{" "}
-											Solvior{" "}
+											Anathoth{" "}
 										</Link>{" "}
 										All right reserved.
 									</p>

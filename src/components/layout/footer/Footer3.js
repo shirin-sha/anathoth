@@ -11,7 +11,7 @@ const Footer3 = () => {
 							<div className="footer-widget footer1-col-1 ">
 								<div className="footer-logo">
 									<Link href="/">
-										<img src="/images/logos/primary-logo.png" alt="solvior" />
+										<img src="/images/logos/primary-logo.png" alt="anathoth" />
 									</Link>
 								</div>
 								<p className="desc">
@@ -153,7 +153,7 @@ const Footer3 = () => {
 										© 2025{" "}
 										<Link href="/" target="_blank">
 											{" "}
-											Solvior{" "}
+											Anathoth{" "}
 										</Link>{" "}
 										All right reserved.
 									</p>

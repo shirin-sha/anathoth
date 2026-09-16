@@ -52,8 +52,8 @@ const MobileMenu = ({ isMobileMenuOpen, handleMobileToggler }) => {
 							<div className="contact_item">
 								<span className="subtitle">Email</span>
 								<div className="text">
-									<Link className="link" href="mailto:support@solvior.com">
-										support@solvior.com
+									<Link className="link" href="mailto:support@anathoth.com">
+										support@anathoth.com
 									</Link>
 								</div>
 							</div>

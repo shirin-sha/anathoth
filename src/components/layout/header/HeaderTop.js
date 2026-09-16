@@ -87,8 +87,8 @@ const HeaderTop = ({ type }) => {
 										<span>
 											<i className="tji-email"></i>
 										</span>
-										<Link href="mailto:support@solvior.com">
-											support@solvior.com
+										<Link href="mailto:support@anathoth.com">
+											support@anathoth.com
 										</Link>
 									</div>
 									<div className="info_item">

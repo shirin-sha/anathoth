@@ -18,8 +18,8 @@ import "./assets/css/odometer-theme-default.css";
 import "./assets/css/solvior-icons.css";
 import "./globals.scss";
 export const metadata = {
-	title: "Solvior - Business Consulting React NextJs Template",
-	description: "Solvior - Business Consulting React NextJs Template",
+	title: "Anathoth - Business Consulting React NextJs Template",
+	description: "Anathoth - Business Consulting React NextJs Template",
 };
 
 const lato = Lato({

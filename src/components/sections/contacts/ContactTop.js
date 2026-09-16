@@ -26,7 +26,7 @@ const ContactTop = () => {
 							<h3 className="contact-title">Email us</h3>
 							<ul className="contact-list">
 								<li>
-									<Link href="mailto:solvior@gmail.com">solvior@gmail.com</Link>
+									<Link href="mailto:anathoth@gmail.com">anathoth@gmail.com</Link>
 								</li>
 								<li>
 									<Link href="mailto:support@gmail.com">support@gmail.com</Link>
@@ -76,8 +76,8 @@ const ContactTop = () => {
 							<h3 className="contact-title">Live chat</h3>
 							<ul className="contact-list">
 								<li>
-									<Link href="mailto:livechat@solvior.com">
-										livechat@solvior.com
+									<Link href="mailto:livechat@anathoth.com">
+										livechat@anathoth.com
 									</Link>
 								</li>
 								<li className="active">
