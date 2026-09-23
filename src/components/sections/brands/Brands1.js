@@ -2,7 +2,7 @@ import BrandSlider2 from "@/components/shared/brands/BrandSlider2";
 
 const Brands1 = () => {
 	return (
-		<section className="tj-brand-section-two section-bottom-space">
+		<section className="tj-brand-section-two section-top-space">
 			<div className="container">
 				<div className="row">
 					<div className="col-12">

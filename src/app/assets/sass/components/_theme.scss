@@ -397,6 +397,15 @@ input[type="color"] {
 		padding-bottom: 80px;
 	}
 }
+.section-top-space {
+	padding-top: 120px;
+	@media #{$lg} {
+		padding-top: 100px;
+	}
+	@media #{$md, $sm, $xs} {
+		padding-top: 80px;
+	}
+}
 img {
 	max-width: 100%;
 }

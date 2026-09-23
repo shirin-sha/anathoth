@@ -1,26 +1,25 @@
-import BrandSlider1 from "@/components/shared/brands/BrandSlider1";
 import BackToTop from "@/components/shared/others/BackToTop";
 import Link from "next/link";
 
 const Footer = ({ footerType }) => {
 	return (
 		<footer className="tj-footer-area footer-1">
-			{/* <!-- start: Brand Section --> */}
 			{footerType === "inner" ? (
 				""
 			) : (
-				<section className="tj-brand-section">
+				<section className="footer-gallery-cta">
 					<div className="container">
-						<div className="row">
-							<div className="col-12">
-								<BrandSlider1 />
-							</div>
+						<div className="footer-gallery-cta-inner">
+							<p className="footer-gallery-quote">
+								&ldquo;The CREATOR is the Source of all Beauty&rdquo;
+							</p>
+							<Link href="/portfolios" className="footer-gallery-btn">
+								Visit Our Art Gallery
+							</Link>
 						</div>
 					</div>
 				</section>
 			)}
-
-			{/* <!-- end: Brand Section --> */}
 
 			<div className="footer-top-area fix">
 				<div className="container">

@@ -27,11 +27,9 @@ const Blogs2 = ({ type, isSidebar }) => {
 		setCurrentpage(0);
 	}, [totalItems]);
 	return (
-		<section className="tj-blog-section-two section-space">
+		<section className="tj-blog-section-two section-space ">
 			<div className="container">
-				{type === 2 ? (
-					""
-				) : (
+			
 					<div className="row">
 						<div className="col-12">
 							<div className="sec-heading style-2 text-center">
@@ -44,7 +42,7 @@ const Blogs2 = ({ type, isSidebar }) => {
 							</div>
 						</div>
 					</div>
-				)}
+				
 				<div className={`row  ${isSidebar ? "rg-50" : ""}`}>
 					<div className={`${isSidebar ? "col-lg-8" : "col-12"}`}>
 						<div className={`row rg-30 ${type === 2 ? "" : "leftSwipeWrap"}`}>

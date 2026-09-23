@@ -76,6 +76,25 @@
 }
 .tj-blog-section-two {
 	overflow: hidden;
+	position: relative;
+	margin-bottom: -40px;
+	z-index: 2;
+
+	&::before {
+		position: absolute;
+		content: "";
+		bottom: 1px;
+		inset-inline-start: 0;
+		width: 100%;
+		height: 40px;
+		mask-image: url(/images/shapes/brand-shapes.svg);
+		background: var(--tj-color-common-white);
+		mask-repeat: no-repeat;
+		mask-position: top center;
+		mask-size: contain;
+		z-index: 2;
+		pointer-events: none;
+	}
 }
 
 .tj-blog-section-three {
