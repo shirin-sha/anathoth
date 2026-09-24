@@ -24,7 +24,7 @@ const Testimonials7 = () => {
 	}, []);
 
 	return (
-		<section className="h8-testimonial mb-60">
+		<section className="h8-testimonial">
 			<div className="container tj-gap-30">
 				<div className="row">
 					{/* Left column */}
