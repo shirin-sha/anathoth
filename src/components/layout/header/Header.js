@@ -2,10 +2,8 @@
 import ButtonHeaderContact from "@/components/shared/buttons/ButtonHeaderContact";
 import ButtonMenuToggler from "@/components/shared/buttons/ButtonMenuToggler";
 import ButtonPrimary from "@/components/shared/buttons/ButtonPrimary";
-import ButtonSearch from "@/components/shared/buttons/ButtonSearch";
 import useIsSticky from "@/hooks/useIsSticky";
 import { Fragment, useCallback, useState } from "react";
-import HeaderSearchForm from "./HeaderSearchForm";
 import HeaderTop from "./HeaderTop";
 import Logo from "./Logo";
 import MobileMenu from "./MobileMenu";
@@ -13,11 +11,7 @@ import Navbar from "./Navbar";
 
 const Header = ({ headerType, isHeaderTop, topbarType, isStickyHeader }) => {
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-	const [isSearchOpen, setIsSearchOpen] = useState(false);
 	const isSticky = useIsSticky(isStickyHeader);
-	const handleSearchToggler = useCallback(currentState => {
-		setIsSearchOpen(currentState);
-	}, []);
 	const handleMobileToggler = useCallback(currentState => {
 		setIsMobileMenuOpen(currentState);
 	}, []);
@@ -81,68 +75,22 @@ const Header = ({ headerType, isHeaderTop, topbarType, isStickyHeader }) => {
 										) : (
 											""
 										)}
-										{/* <!-- search btn --> */}
-										{headerType === 7 || headerType === 10 ? (
-											""
-										) : (
-											<ButtonSearch
-												headerType={headerType}
-												handleSearchToggler={handleSearchToggler}
-											/>
-										)}
-										{/* <!-- button --> */}
-										{headerType === 2 ||
-										headerType === 3 ||
-										headerType == 4 ||
-										headerType == 6 ? (
-											<ButtonMenuToggler
-												headerType={headerType}
-												handleMobileToggler={handleMobileToggler}
-											/>
-										) : (
-											""
-										)}
-										{headerType !== 2 ? (
-											<ButtonPrimary
-												text={
-													headerType === 8 ? "Free consultation" : "Get a quote"
-												}
-												url={"/contact"}
-												className={
-													(headerType === 3 ||
-														headerType == 4 ||
-														headerType == 5 ||
-														headerType == 6 ||
-														headerType == 9) &&
-													!isStickyHeader
-														? ""
-														: headerType == 9
-														? ""
-														: "header_btn"
-												}
-											/>
-										) : (
-											""
-										)}{" "}
-										{headerType === 7 ||
-										headerType === 7 ||
-										headerType === 10 ? (
-											<ButtonSearch
-												headerType={headerType}
-												handleSearchToggler={handleSearchToggler}
-											/>
-										) : (
-											""
-										)}
-										{headerType === 7 || headerType === 10 ? (
-											<ButtonMenuToggler
-												headerType={headerType}
-												type={2}
-												handleMobileToggler={handleMobileToggler}
-											/>
-										) : (
-											""
-										)}
+										<ButtonPrimary
+											text={"Request a Quote"}
+											url={"/contact"}
+											className={
+												(headerType === 3 ||
+													headerType == 4 ||
+													headerType == 5 ||
+													headerType == 6 ||
+													headerType == 9) &&
+												!isStickyHeader
+													? ""
+													: headerType == 9
+													? ""
+													: "header_btn"
+											}
+										/>
 									</div>
 
 									{/* <!-- menu bar --> */}
@@ -163,12 +111,6 @@ const Header = ({ headerType, isHeaderTop, topbarType, isStickyHeader }) => {
 			<MobileMenu
 				isMobileMenuOpen={isMobileMenuOpen}
 				handleMobileToggler={handleMobileToggler}
-			/>
-
-			{/* Search Overlay */}
-			<HeaderSearchForm
-				handleSearchToggler={handleSearchToggler}
-				isSearchOpen={isSearchOpen}
 			/>
 		</Fragment>
 	);

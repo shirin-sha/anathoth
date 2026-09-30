@@ -872,4 +872,29 @@
 	}
 }
 
+.mainmenu > ul {
+	@media #{$xxl} {
+		gap: 22px;
+	}
+	@media #{$xl} {
+		gap: 16px;
+		> li > a {
+			font-size: 15px;
+		}
+	}
+	@media #{$lg} {
+		gap: 12px;
+		> li > a {
+			font-size: 14px;
+		}
+	}
+}
+.header_right_info {
+	@media (max-width: 1599px) {
+		.header_contact {
+			display: none !important;
+		}
+	}
+}
+
 /* !END: Header CSS */

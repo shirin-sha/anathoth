@@ -11,7 +11,7 @@ const Brands1 = () => {
 							data-wow-delay="0.1s"
 						>
 							<h6 className="sec-title">
-								Join the <span>1000+</span> companies benefiting from anathoth
+							The brands we’ve helped bring ideas to life.
 							</h6>
 						</div>
 					</div>

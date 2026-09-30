@@ -6,8 +6,44 @@ import usePagination from "@/hooks/usePagination";
 import getBlogs from "@/libs/getBlogs";
 import { useEffect } from "react";
 
+const homeArticles = [
+	{
+		day: "[DD]",
+		month: "[MMM]",
+		category: "Web Design",
+		comments: "[Count] Comments",
+		titleLines: ["Web design in Kuwait", "that builds customer trust"],
+		excerpt:
+			"Discover how clear design, useful content and simple navigation can help your website turn visitor interest into enquiries.",
+		path: "/insights/web-design-in-kuwait",
+		img2: "/images/blog/h2-blog-1.webp",
+	},
+	{
+		day: "[DD]",
+		month: "[MMM]",
+		category: "Business Systems",
+		comments: "[Count] Comments",
+		titleLines: ["Choosing Odoo or Zoho", "for your business"],
+		excerpt:
+			"Discover what to consider when choosing an ERP or CRM solution that fits your team and business goals.",
+		path: "/insights/choosing-odoo-or-zoho",
+		img2: "/images/blog/h2-blog-2.webp",
+	},
+	{
+		day: "[DD]",
+		month: "[MMM]",
+		category: "Hosting & Email",
+		comments: "[Count] Comments",
+		titleLines: ["Why your business needs", "professional email and hosting"],
+		excerpt:
+			"Learn how hosting, domain management and business email support a professional digital presence and your team’s daily work.",
+		path: "/insights/professional-email-and-hosting",
+		img2: "/images/blog/h2-blog-3.webp",
+	},
+];
+
 const Blogs2 = ({ type, isSidebar }) => {
-	const items = getBlogs();
+	const items = type ? getBlogs() : homeArticles;
 	const limit = isSidebar && type === 2 ? 8 : type === 2 ? 6 : 3;
 	// get pagination details
 	const {
@@ -34,10 +70,10 @@ const Blogs2 = ({ type, isSidebar }) => {
 						<div className="col-12">
 							<div className="sec-heading style-2 text-center">
 								<span className="sub-title wow fadeInUp" data-wow-delay="0.1s">
-									// Latest news
+									// Business Insights
 								</span>
 								<h2 className="sec-title text-anim">
-									Tip and tricks for success
+									Fresh insights for your next move.
 								</h2>
 							</div>
 						</div>

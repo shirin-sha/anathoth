@@ -1,8 +1,10 @@
+import modifyNumber from "@/libs/modifyNumber";
 import Link from "next/link";
 import ButtonPrimary from "../buttons/ButtonPrimary";
 
 const PortfolioCard10 = ({ portfolio, idx, lastItem }) => {
-	const { title, img6, id, tags } = portfolio ? portfolio : {};
+	const { title, img6, tags, desc, path } = portfolio ? portfolio : {};
+	const url = path ? path : "/our-work";
 	return (
 		<div
 			className={`h10-projects_item ${idx < lastItem ? "service-stack" : ""}`}
@@ -21,26 +23,22 @@ const PortfolioCard10 = ({ portfolio, idx, lastItem }) => {
 					{tags?.length
 						? tags?.map((tag, idx) => (
 								<li key={idx + 11}>
-									<Link key={100 + idx} href={`/portfolios`}>
-										{tag}
-									</Link>
+									<Link href={"/our-work"}>{tag}</Link>
 								</li>
 						  ))
 						: ""}
 				</ul>
 
 				<h3 className="project_title">
-					<Link href={`/portfolios/${id}`}>{title}</Link>
+					<Link href={url}>
+						{modifyNumber(idx + 1)}. {title}
+					</Link>
 				</h3>
 
-				<div className="desc">
-					Our consultant specialize in delivering rapid, actionable solutions
-					that address your most pressing business on challenges. Whether you
-					are facing.
-				</div>
+				<div className="desc">{desc}</div>
 				<ButtonPrimary
-					text={"Learn more"}
-					url={`/portfolios/${id}`}
+					text={"View Project"}
+					url={url}
 					className={"project_button"}
 				/>
 			</div>

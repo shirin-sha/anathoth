@@ -1,6 +1,7 @@
 const TestimonialsCard5 = ({ testimonial, type }) => {
-	const { authorName, authorDesig, desc, img, logoImg, logoImgLight } =
-		testimonial ? testimonial : {};
+	const { authorName, authorDesig, quote, img } = testimonial
+		? testimonial
+		: {};
 	return (
 		<div
 			className={`testimonial-item ${
@@ -20,10 +21,9 @@ const TestimonialsCard5 = ({ testimonial, type }) => {
 				</div>
 				<div className="desc">
 					<p>
-						“Our experience on Anathoth has been nothing short of exceptional.
-						From one, their team demonstrated a deep understanding of our
-						industry and quickly identified key areas for improvement
-						recommendations From one, their team demonstrated.”
+						{quote
+							? `“${quote}”`
+							: "“Our experience on Anathoth has been nothing short of exceptional. From one, their team demonstrated a deep understanding of our industry and quickly identified key areas for improvement recommendations From one, their team demonstrated.”"}
 					</p>
 				</div>
 			</div>

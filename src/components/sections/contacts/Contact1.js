@@ -18,17 +18,17 @@ const Contact1 = () => {
 										className="sub-title wow fadeInUp"
 										data-wow-delay="0.1s"
 									>
-										// Meet our team
+										// Let’s Work Together
 									</span>
 									<h2 className="sec-title text-anim">
-										Let’s discuss further to get better results
+										Your next project starts <br />
+										with a conversation.
 									</h2>
 									<div className="desc wow fadeInUp" data-wow-delay="0.3s">
 										<p>
-											Our mission is to empowers businesses off our all size too
-											thrive in an businesses ever changing marketplaces. In
-											today's dynamicis business environment, the key to success
-											lies.
+											Planning a website, app, business system or brand refresh?
+											Tell us what you have in mind. We’ll help you explore the
+											right solution for your goals, budget and next steps.
 										</p>
 									</div>
 									<div
@@ -36,7 +36,7 @@ const Contact1 = () => {
 										data-wow-delay="0.5s"
 									>
 										<ButtonPrimary
-											text={"Contact us"}
+											text={"Contact Us"}
 											url={"/contact"}
 											className={"white-btn"}
 										/>
@@ -48,18 +48,19 @@ const Contact1 = () => {
 								data-wow-delay="0.1s"
 							>
 								<h3 className="title">
-									Feel free to get in touch or visit our location.
+									Tell us about your project. <br />
+									Let’s work out what’s next.
 								</h3>
 								<div className="contact-item">
 									<div className="contact-text">
 										<i className="fa-solid fa-envelope"></i>
-										<Link href="mailto:support@anathoth.com">
-											support@anathoth.com
+										<Link href="mailto:info@anathothonline.com">
+											info@anathothonline.com
 										</Link>
 									</div>
 									<div className="contact-text">
 										<i className="fa-sharp fa-solid fa-location-dot"></i>
-										Elviraton, CA 48998
+										Al Farwaniya, Kuwait
 									</div>
 								</div>
 								<form>
@@ -71,7 +72,7 @@ const Contact1 = () => {
 													id="first"
 													name="name"
 													placeholder="Full name*"
-													required=""
+													required
 												/>
 											</div>
 										</div>
@@ -82,7 +83,7 @@ const Contact1 = () => {
 													id="emailOne"
 													name="email"
 													placeholder="Email address*"
-													required=""
+													required
 												/>
 											</div>
 										</div>
@@ -93,7 +94,7 @@ const Contact1 = () => {
 													id="tel"
 													name="tel"
 													placeholder="Phone number*"
-													required=""
+													required
 												/>
 											</div>
 										</div>
@@ -103,16 +104,28 @@ const Contact1 = () => {
 													<div className="tj-select">
 														<FormSelect
 															id={"contact"}
+															name={"service"}
 															className="nice-select"
-															defaultValue={"Chose a option"}
+															defaultValue={"Select a service"}
 															items={[
-																{ value: "1", name: "Chose a option" },
-																{ value: "2", name: "IT consulting" },
-																{ value: "3", name: "Market research" },
-																{ value: "4", name: "Business process" },
-																{ value: "5", name: "Business consultancy" },
-																{ value: "6", name: "Digital marketing" },
-																{ value: "7", name: "Branding design" },
+																{ value: "", name: "Select a service" },
+																{
+																	value: "web-app-development",
+																	name: "Web & App Development",
+																},
+																{
+																	value: "erp-crm-business-systems",
+																	name: "ERP/CRM & Business Systems",
+																},
+																{
+																	value: "digital-marketing-branding",
+																	name: "Digital Marketing & Branding",
+																},
+																{
+																	value: "hosting-email-support",
+																	name: "Hosting, Email & Support",
+																},
+																{ value: "not-sure-yet", name: "Not Sure Yet" },
 															]}
 														/>
 													</div>
@@ -124,13 +137,13 @@ const Contact1 = () => {
 												<textarea
 													id="message"
 													name="message"
-													placeholder="Type message"
+													placeholder="Project details"
 												/>
 											</div>
 										</div>
 										<div className="submit-button">
 											<ButtonPrimary
-												text={"Send message"}
+												text={"Send Message"}
 												type="submit"
 												className={"white-btn"}
 											/>

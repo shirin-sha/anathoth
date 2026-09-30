@@ -2,10 +2,35 @@
 
 import ButtonPrimary from "@/components/shared/buttons/ButtonPrimary";
 import ServiceCard3 from "@/components/shared/cards/ServiceCard3";
-import getALlServices from "@/libs/getALlServices";
+
+const services = [
+	{
+		title: "Web & App Development",
+		desc: "Websites, ecommerce stores, mobile apps and custom software that connect with your customers and support your business goals.",
+		path: "/services/web-app-development",
+		bgImg2: "/images/service/h3-service-1.webp",
+	},
+	{
+		title: "ERP/CRM & Business Systems",
+		desc: "Odoo, Zoho and tailored management systems that simplify daily operations for restaurants, hospitals, clinics, garages and workshops.",
+		path: "/services/erp-crm-business-systems",
+		bgImg2: "/images/service/h3-service-2.webp",
+	},
+	{
+		title: "Digital Marketing & Branding",
+		desc: "SEO, social media, digital marketing and creative branding that help your business get discovered, build trust and stand out.",
+		path: "/services/digital-marketing-branding",
+		bgImg2: "/images/service/h3-service-3.webp",
+	},
+	{
+		title: "Hosting, Email & Support",
+		desc: "Web hosting, domains, business email, SSL certificates and website support to keep your digital presence connected and running smoothly.",
+		path: "/services/hosting-email-support",
+		bgImg2: "/images/service/h3-service-4.webp",
+	},
+];
 
 const Services3 = () => {
-	const services = getALlServices()?.slice(0, 4);
 	return (
 		<section className="tj-service-section-three section-space">
 			<div className="container">
@@ -14,28 +39,19 @@ const Services3 = () => {
 						<div className="sec-heading style-2">
 							<div className="sec-text">
 								<span className="sub-title wow fadeInUp" data-wow-delay="0.1s">
-									Transformative solution
+									Our Services
 								</span>
 								<h2 className="sec-title text-anim">
-									Get our comprehensive service offerings
+									Smart solutions for <br />
+									your next big move.
 								</h2>
 							</div>
 							<div
 								className="service-rating wow fadeInUp"
 								data-wow-delay="0.3s"
 							>
-								<div className="star-fill">
-									<div className="star-ratings">
-										<div className="fill-ratings" style={{ width: "73%" }}>
-											<span>★★★★★</span>
-										</div>
-										<div className="empty-ratings">
-											<span>★★★★★</span>
-										</div>
-									</div>
-								</div>
 								<div className="review">
-									Customers review (<strong>4.8</strong>/5.0)
+									<strong>Creative thinking. Practical solutions.</strong>
 								</div>
 							</div>
 						</div>
@@ -44,17 +60,15 @@ const Services3 = () => {
 				<div className="row">
 					<div className="col-12">
 						<div className="service-wrapper-two">
-							{services?.length
-								? services?.map((service, idx) => (
-										<ServiceCard3 key={idx} service={service} idx={idx} />
-								  ))
-								: ""}
+							{services.map((service, idx) => (
+								<ServiceCard3 key={idx} service={service} idx={idx} />
+							))}
 						</div>
 						<div
 							className="service-btn mt-60 text-center wow fadeInUp"
 							data-wow-delay="0.9s"
 						>
-							<ButtonPrimary text={"More Services"} url={"/services"} />
+							<ButtonPrimary text={"View All Services"} url={"/services"} />
 						</div>
 					</div>
 				</div>

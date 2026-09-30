@@ -27,18 +27,19 @@ const Progress1 = () => {
 						<div className="progress-right-content">
 							<div className="sec-heading style-2">
 								<span className="sub-title wow fadeInUp" data-wow-delay="0.1s">
-									// Transformative solution
+									// Why Choose Anathoth
 								</span>
 								<h2 className="sec-title text-anim">
-									Trusted professionals with knowledge
+									Built on experience. <br />
+									Focused on you.
 								</h2>
 								<div className="desc wow fadeInUp" data-wow-delay="0.3s">
 									<p>
-										Our mission is to empowers businesses off our all size too
-										thrive in an businesses ever changing marketplaces. In
-										today's dynamicis business environment, the key to success
-										lies. Exceptionalis values through out strategic innovative
-										consult business
+										From the first conversation to ongoing support, we combine
+										creative expertise with technical skill and clear
+										communication. Every decision starts with your goals, so
+										your website, software or business system serves the people
+										who matter most: your customers and your team.
 									</p>
 								</div>
 								<div
@@ -47,21 +48,21 @@ const Progress1 = () => {
 								>
 									<div className="proggess-item">
 										<div className="proggess-circle">
-											<ProgressBar />
+											<ProgressBar count={550} suffix="+" />
 										</div>
 										<div className="proggess-text">
 											<span className="sub-title">
-												Business <br /> consultants
+												Websites <br /> developed
 											</span>
 										</div>
 									</div>
 									<div className="proggess-item">
 										<div className="proggess-circle">
-											<ProgressBar value={75} />
+											<ProgressBar value={75} count={325} suffix="+" />
 										</div>
 										<div className="proggess-text">
 											<span className="sub-title">
-												Clients <br /> communication
+												Clients <br /> served
 											</span>
 										</div>
 									</div>

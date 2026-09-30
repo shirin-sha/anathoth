@@ -1,9 +1,9 @@
 import modifyNumber from "@/libs/modifyNumber";
 import Link from "next/link";
 
-const ServiceCard3 = ({ service, idx, lastItem }) => {
-	const { title, desc, id, totalProject, iconName, img, bgImg2, svg } =
-		service || {};
+const ServiceCard3 = ({ service, idx }) => {
+	const { title, desc, path, bgImg2 } = service || {};
+	const url = path ? path : "/services";
 	return (
 		<div
 			className="service-style-3 wow fadeInUp"
@@ -16,24 +16,21 @@ const ServiceCard3 = ({ service, idx, lastItem }) => {
 			<div className="service-title">
 				<h4 className="title">
 					<span>{modifyNumber(idx + 1)}.</span>
-					<Link href={`/services/${id}`}>{title}</Link>
+					<Link href={url}>{title}</Link>
 				</h4>
 			</div>
 			<div className="desc">
-				<p>
-					In today's dynamic business environment, the key to success lies
-					strategic our planning and operational business.
-				</p>
+				<p>{desc}</p>
 
 				<div className="service-button d-lg-none">
-					<Link href={`/services/${id}`} className="text-btn">
-						Learn more <i className="tji-angle-right"></i>
+					<Link href={url} className="text-btn">
+						Learn More <i className="tji-angle-right"></i>
 					</Link>
 				</div>
 			</div>
 			<div className="service-button d-none d-lg-inline-block">
-				<Link href={`/services/${id}`} className="text-btn">
-					Learn more <i className="tji-angle-right"></i>
+				<Link href={url} className="text-btn">
+					Learn More <i className="tji-angle-right"></i>
 				</Link>
 			</div>
 		</div>

@@ -6,6 +6,8 @@ import { useInView } from "react-intersection-observer";
 
 const ProgressBar = ({
 	value = 88,
+	count,
+	suffix = "%",
 	size = 170,
 	thickness = 0.12,
 	strokeLinecap = 0,
@@ -46,11 +48,11 @@ const ProgressBar = ({
 		// animate number
 		const counter = { val: 0 };
 		const numberTween = gsap.to(counter, {
-			val: value,
+			val: count ?? value,
 			duration: 2,
 			ease: "power2.out",
 			onUpdate: () => {
-				text.textContent = Math.round(counter.val) + "%";
+				text.textContent = Math.round(counter.val) + suffix;
 			},
 		});
 		// Cleanup on unmount
@@ -58,7 +60,7 @@ const ProgressBar = ({
 			circleTween.kill();
 			numberTween.kill();
 		};
-	}, [inView, value, size, thickness]);
+	}, [inView, value, count, suffix, size, thickness]);
 
 	return (
 		<div ref={ref} style={{ width: size, height: size, position: "relative" }}>
@@ -96,7 +98,7 @@ const ProgressBar = ({
 					transform: "translate(-50%, -50%)",
 				}}
 			>
-				0%
+				0{suffix}
 			</span>
 		</div>
 	);

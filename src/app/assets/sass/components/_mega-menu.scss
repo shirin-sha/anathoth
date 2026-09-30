@@ -125,6 +125,7 @@
 				&-title {
 					font-size: 16px;
 					font-family: var(--tj-ff-body);
+					color: var(--tj-color-theme-primary);
 					padding-bottom: 10px;
 					position: relative;
 					@media #{$md,$sm,$xs} {
@@ -182,6 +183,38 @@
 								width: 12px;
 							}
 						}
+					}
+				}
+			}
+		}
+
+		&-pages.mega-menu-services-grid {
+			.mega-menu-pages-single {
+				flex: 1 1 25%;
+				width: auto;
+				padding: 30px 25px 20px;
+
+				&:first-child {
+					border-inline-start: 0;
+				}
+				&:last-child {
+					width: auto;
+					padding: 30px 25px 20px;
+					border-inline-start: 1px solid var(--tj-color-border-2);
+				}
+				.mega-menu-list a {
+					line-height: 1.3;
+					padding: 9px 0;
+					&::before {
+						top: 50%;
+					}
+				}
+				@media #{$md,$sm,$xs} {
+					&,
+					&:last-child {
+						width: 100%;
+						padding: 20px 0;
+						border-inline-start: 0;
 					}
 				}
 			}

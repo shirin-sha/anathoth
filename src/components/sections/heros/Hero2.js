@@ -6,23 +6,37 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import ButtonPrimary from "@/components/shared/buttons/ButtonPrimary";
 import Image from "next/image";
+import { Fragment } from "react";
 
 const Hero2 = () => {
 	const heroSlides = [
 		{
-			subtitle: "number #1 solver agency",
-			title: "Transform your business with expert consultation",
+			subtitle: "Web & App Development",
+			titleLines: ["Websites and apps", "built to move your", "business forward."],
+			btnText: "Start Your Project",
+			desc: "From websites and ecommerce to mobile apps and custom software, Anathoth builds digital experiences around your business goals.",
 			img: "/images/slider/slider-1.webp",
 		},
 		{
-			subtitle: "number #1 solver agency",
-			title: "Transform your business with expert consultation",
+			subtitle: "ERP/CRM & Business Systems",
+			titleLines: ["Bring your business", "together with", "smarter systems."],
+			btnText: "Discuss Your Needs",
+			desc: "Connect your operations with Odoo, Zoho and business management systems tailored to restaurants, hospitals, clinics, garages and workshops.",
 			img: "/images/slider/slider-2.webp",
 		},
 		{
-			subtitle: "number #1 solver agency",
-			title: "Transform your business with expert consultation",
+			subtitle: "Digital Marketing & Branding",
+			titleLines: ["Get discovered.", "Be remembered.", "Win more customers."],
+			btnText: "Grow Your Brand",
+			desc: "Stand out in Kuwait with distinctive branding, SEO and digital marketing that help the right customers discover your business.",
 			img: "/images/slider/slider-3.webp",
+		},
+		{
+			subtitle: "Hosting, Email & Support",
+			titleLines: ["Keep your business", "connected and", "running smoothly."],
+			btnText: "Let’s Get Connected",
+			desc: "Bring hosting, domains, business email and website support together, with practical help to keep your digital presence running smoothly.",
+			img: "/images/slider/h7-slider-1.webp",
 		},
 	];
 
@@ -59,7 +73,7 @@ const Hero2 = () => {
 				onSlideChange={swiper => updateDashWidth(swiper)}
 				className="full-slider-active"
 			>
-				{heroSlides.map(({ img, title, subtitle }, idx) => (
+				{heroSlides.map(({ img, titleLines, subtitle, btnText, desc }, idx) => (
 					<SwiperSlide key={idx}>
 						<section
 							className="tj-slider-section"
@@ -70,9 +84,16 @@ const Hero2 = () => {
 									<div className="slider-wrapper">
 										<div className="slider-content">
 											<span className="sub-title">{subtitle}</span>
-											<h1 className="slider-title">{title}</h1>
+											<h1 className="slider-title">
+												{titleLines.map((line, lineIdx) => (
+													<Fragment key={lineIdx}>
+														{lineIdx ? <br /> : ""}
+														{line}
+													</Fragment>
+												))}
+											</h1>
 											<ButtonPrimary
-												text={"Free consultation"}
+												text={btnText}
 												url={"/contact"}
 												className={"slider-button"}
 											/>
@@ -88,11 +109,7 @@ const Hero2 = () => {
 												/>
 											</div>
 											<div className="desc">
-												<p>
-													Transform your business growth with expert consultancy
-													services by our team of seasoned consultants
-													unparalleled.
-												</p>
+												<p>{desc}</p>
 											</div>
 											<div className="slider-shape">
 												<Image

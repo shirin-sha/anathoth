@@ -2,10 +2,23 @@ import makePath from "@/libs/makePath";
 import modifyNumber from "@/libs/modifyNumber";
 import Image from "next/image";
 import Link from "next/link";
+import { Fragment } from "react";
 
 const BlogCard2 = ({ blog, type, isSidebar, idx }) => {
-	const { title, desc, id, img2, detailsImg, category, date, day, month } =
-		blog || {};
+	const {
+		title,
+		titleLines,
+		excerpt,
+		comments,
+		path,
+		id,
+		img2,
+		detailsImg,
+		category,
+		day,
+		month,
+	} = blog || {};
+	const url = path ? path : `/blogs/${id}`;
 	return (
 		<div
 			className={`blog-style-2  ${type === 2 ? "wow fadeInUp" : "left-swipe"}`}
@@ -47,21 +60,31 @@ const BlogCard2 = ({ blog, type, isSidebar, idx }) => {
 								{category}
 							</Link>
 						</li>
-						<li>03 Comments</li>
+						<li>{comments ? comments : "03 Comments"}</li>
 					</ul>
 				</div>
 				<h4 className="title under-line">
-					<Link href={`/blogs/${id}`}>{title}</Link>
+					<Link href={url}>
+						{titleLines
+							? titleLines.map((line, lineIdx) => (
+									<Fragment key={lineIdx}>
+										{lineIdx ? <br /> : ""}
+										{line}
+									</Fragment>
+							  ))
+							: title}
+					</Link>
 				</h4>
 				<div className="desc">
 					<p>
-						In today's dynamic business environment, the key to success lies in
-						strategic planning.
+						{excerpt
+							? excerpt
+							: "In today's dynamic business environment, the key to success lies in strategic planning."}
 					</p>
 				</div>
 				<div className="blog-button">
-					<Link className="blog-btn text-btn" href={`/blogs/${id}`}>
-						Read more <i className="tji-arrow-right"></i>
+					<Link className="blog-btn text-btn" href={url}>
+						Read More <i className="tji-arrow-right"></i>
 					</Link>
 				</div>
 			</div>
