@@ -9,7 +9,7 @@ const BlogCard2 = ({ blog, type, isSidebar, idx }) => {
 		title,
 		titleLines,
 		excerpt,
-		comments,
+		commentsLabel,
 		path,
 		id,
 		img2,
@@ -60,7 +60,7 @@ const BlogCard2 = ({ blog, type, isSidebar, idx }) => {
 								{category}
 							</Link>
 						</li>
-						<li>{comments ? comments : "03 Comments"}</li>
+						<li>{commentsLabel ? commentsLabel : "03 Comments"}</li>
 					</ul>
 				</div>
 				<h4 className="title under-line">

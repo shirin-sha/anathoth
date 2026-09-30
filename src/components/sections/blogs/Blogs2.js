@@ -11,7 +11,7 @@ const homeArticles = [
 		day: "[DD]",
 		month: "[MMM]",
 		category: "Web Design",
-		comments: "[Count] Comments",
+		commentsLabel: "[Count] Comments",
 		titleLines: ["Web design in Kuwait", "that builds customer trust"],
 		excerpt:
 			"Discover how clear design, useful content and simple navigation can help your website turn visitor interest into enquiries.",
@@ -22,7 +22,7 @@ const homeArticles = [
 		day: "[DD]",
 		month: "[MMM]",
 		category: "Business Systems",
-		comments: "[Count] Comments",
+		commentsLabel: "[Count] Comments",
 		titleLines: ["Choosing Odoo or Zoho", "for your business"],
 		excerpt:
 			"Discover what to consider when choosing an ERP or CRM solution that fits your team and business goals.",
@@ -33,7 +33,7 @@ const homeArticles = [
 		day: "[DD]",
 		month: "[MMM]",
 		category: "Hosting & Email",
-		comments: "[Count] Comments",
+		commentsLabel: "[Count] Comments",
 		titleLines: ["Why your business needs", "professional email and hosting"],
 		excerpt:
 			"Learn how hosting, domain management and business email support a professional digital presence and your team’s daily work.",
