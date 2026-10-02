@@ -428,8 +428,13 @@
 .site-logo {
 	.logo {
 		display: inline-block;
-		max-width: 150px;
-		width: 100%;
+		img {
+			height: 50px;
+			width: auto;
+			@media #{$md, $sm, $xs} {
+				height: 44px;
+			}
+		}
 	}
 }
 .header-bottom {

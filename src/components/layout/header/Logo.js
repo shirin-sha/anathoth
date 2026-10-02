@@ -21,8 +21,8 @@ const Logo = ({ headerType, isStickyHeader }) => {
 							: "logo_02.svg"
 					}`}
 					alt="logo"
-					height={37}
-					width={150}
+					height={150}
+					width={233}
 				/>
 			</Link>
 		</div>
