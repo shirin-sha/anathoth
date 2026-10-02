@@ -15,10 +15,10 @@ const Logo = ({ headerType, isStickyHeader }) => {
 							headerType === 6 ||
 							headerType === 9) &&
 						!isStickyHeader
-							? "secondary-logo.png"
+							? "logo_02.svg"
 							: headerType === 9
-							? "secondary-logo.png"
-							: "primary-logo.png"
+							? "logo_02.svg"
+							: "logo_02.svg"
 					}`}
 					alt="logo"
 					height={37}

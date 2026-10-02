@@ -102,10 +102,11 @@ const Hero2 = () => {
 										<div className="slider-feature-box">
 											<div className="slider-logo">
 												<Image
-													src="/images/icons/slider-award.svg"
-													alt="Icons"
-													width={80}
-													height={68}
+													src="/images/icons/logo_01.svg"
+													alt="Anathoth"
+													width={130}
+													height={110}
+													style={{ width: "100%", height: "auto" }}
 												/>
 											</div>
 											<div className="desc">

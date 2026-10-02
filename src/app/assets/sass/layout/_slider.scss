@@ -118,12 +118,13 @@
 			max-width: 100%;
 		}
 		.slider-logo {
-			width: 80px;
+			width: 130px;
+			flex: 0 0 auto;
 			@media #{$lg, $md} {
-				width: 70px;
+				width: 110px;
 			}
 			@media #{$sm, $xs} {
-				width: 70px;
+				width: 90px;
 				flex: 0 0 auto;
 			}
 		}

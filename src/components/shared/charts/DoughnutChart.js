@@ -12,7 +12,7 @@ const DoughnutChart = () => {
 				backgroundColor: [
 					"rgba(247, 247, 247, 0.2)",
 					"rgba(247, 247, 247, 0.5)",
-					"rgba(0, 117, 255, 1)",
+					"rgba(132, 71, 69, 1)",
 				],
 				borderWidth: 0,
 				spacing: 4,
