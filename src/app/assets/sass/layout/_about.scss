@@ -127,7 +127,7 @@
 }
 
 .tj-about-section-two {
-	background-color: #eff6fe;
+	background-color: #ffffff;
 }
 
 .about-wrapper-two {
@@ -612,12 +612,20 @@
 	max-width: 400px;
 	width: 100%;
 	height: 435px;
-	mask-image: url(/images/shapes/h2-counter-shapes.svg);
-	mask-repeat: no-repeat;
-	mask-size: contain;
-	mask-position: center;
-	background-color: var(--tj-color-common-white);
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		z-index: 0;
+		mask-image: url(/images/shapes/h2-counter-shapes.svg);
+		mask-repeat: no-repeat;
+		mask-size: contain;
+		mask-position: center;
+		background-color: var(--tj-color-theme-bg);
+	}
 	.funfact-box {
+		position: relative;
+		z-index: 1;
 		max-width: 250px;
 		width: 100%;
 	}
